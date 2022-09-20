@@ -1,0 +1,16 @@
+
+services:
+    emotion-detection:
+        build: ./
+        networks:
+            - default-network
+        restart: unless-stopped
+        ports:
+            - 8501:8501
+
+
+
+networks:
+    default-network:
+        external:
+            name: default-network
